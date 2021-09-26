@@ -1,6 +1,9 @@
 {
     "name": "hexlet/code",
+    "type": "project",
+    "bin": ["bin/brain-games"],
     "description": "brain games",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Hexlet\\Code\\": "src/"
@@ -9,7 +12,7 @@
     "authors": [
         {
             "name": "Vladimir Suragin",
-            "email": "v.suragin@yclients.tech"
+            "email": "vladimir.suragin@gmail.com"
         }
     ],
     "require": {}
