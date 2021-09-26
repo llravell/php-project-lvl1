@@ -1,0 +1,16 @@
+{
+    "name": "hexlet/code",
+    "description": "brain games",
+    "autoload": {
+        "psr-4": {
+            "Hexlet\\Code\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vladimir Suragin",
+            "email": "v.suragin@yclients.tech"
+        }
+    ],
+    "require": {}
+}
