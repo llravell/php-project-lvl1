@@ -1,7 +1,10 @@
 {
     "name": "hexlet/code",
     "type": "project",
-    "bin": ["bin/brain-games"],
+    "bin": [
+        "bin/brain-games",
+        "bin/brain-even"
+    ],
     "description": "brain games",
     "license": "MIT",
     "autoload": {
@@ -9,7 +12,8 @@
             "Hexlet\\Code\\": "src/"
         },
         "files": [
-            "src/Cli.php"
+            "src/Cli.php",
+            "src/EvenGame.php"
         ]
     },
     "authors": [
