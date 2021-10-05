@@ -2,9 +2,6 @@
 
 namespace Hexlet\Code\EvenGame;
 
-use function cli\line;
-use function cli\prompt;
-
 const EVEN_GAME_RULES = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 function isEven(int $number)

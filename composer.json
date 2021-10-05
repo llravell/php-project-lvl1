@@ -3,7 +3,8 @@
     "type": "project",
     "bin": [
         "bin/brain-games",
-        "bin/brain-even"
+        "bin/brain-even",
+        "bin/brain-calc"
     ],
     "description": "brain games",
     "license": "MIT",
@@ -13,8 +14,9 @@
         },
         "files": [
             "src/Cli.php",
-            "src/GameCore.php",
-            "src/EvenGame.php"
+            "src/Engine.php",
+            "src/EvenGame.php",
+            "src/CalcGame.php"
         ]
     },
     "authors": [
