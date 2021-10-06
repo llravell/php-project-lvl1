@@ -35,26 +35,28 @@ function askQuestion(string $question)
     return prompt('Your answer');
 }
 
-function startGame(string $rules, callable $generateQuestion)
+function configurateGame(string $rules, callable $generateQuestion)
 {
-    $userName = readUserName();
-    greetUser($userName);
-    printGameRules($rules);
+    return function () use ($rules, $generateQuestion) {
+        $userName = readUserName();
+        greetUser($userName);
+        printGameRules($rules);
 
-    $remainingQuestions = QUESTION_COUNT;
+        $remainingQuestions = QUESTION_COUNT;
 
-    while ($remainingQuestions > 0) {
-        [$question, $rightAnswer] = $generateQuestion();
-        $answer = askQuestion($question);
+        while ($remainingQuestions > 0) {
+            [$question, $rightAnswer] = $generateQuestion();
+            $answer = askQuestion($question);
 
-        if ($answer !== $rightAnswer) {
-            printGameOver($userName, $answer, $rightAnswer);
-            return;
+            if ($answer !== $rightAnswer) {
+                printGameOver($userName, $answer, $rightAnswer);
+                return;
+            }
+
+            line('Correct!');
+            $remainingQuestions--;
         }
 
-        line('Correct!');
-        $remainingQuestions--;
-    }
-
-    line('Congratulations, %s!', $userName);
+        line('Congratulations, %s!', $userName);
+    };
 }

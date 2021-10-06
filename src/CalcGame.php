@@ -2,7 +2,9 @@
 
 namespace Hexlet\Code\CalcGame;
 
-const CALC_GAME_RULES = '';
+use function Hexlet\Code\Engine\configurateGame;
+
+const CALC_GAME_RULES = 'What is the result of the expression?';
 
 const OPERATIONS = ['+', '-', '*'];
 
@@ -23,14 +25,19 @@ function calcExtention(int $a, int $b, string $operation)
     }
 }
 
-function generateCalcQuestion()
+function startCalcGame()
 {
-    $a = random_int(1, 100);
-    $b = random_int(1, 100);
-    $operation = getRandomOperation();
+    $generateCalcQuestion = function () {
+        $a = random_int(1, 50);
+        $b = random_int(1, 50);
+        $operation = getRandomOperation();
 
-    $rightAnswer = (string) calcExtention($a, $b, $operation);
-    $question = sprintf('%d %s %d', $a, $operation, $b);
+        $rightAnswer = (string) calcExtention($a, $b, $operation);
+        $question = sprintf('%d %s %d', $a, $operation, $b);
 
-    return [$question, $rightAnswer];
+        return [$question, $rightAnswer];
+    };
+
+    $start = configurateGame(CALC_GAME_RULES, $generateCalcQuestion);
+    $start();
 }

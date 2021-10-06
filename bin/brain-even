@@ -1,9 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-use function Hexlet\Code\Engine\startGame;
-use function Hexlet\Code\EvenGame\generateEvenQuestion;
-use const Hexlet\Code\EvenGame\EVEN_GAME_RULES;
+use function Hexlet\Code\EvenGame\startEvenGame;
 
 $autoloadPath1 = __DIR__ . '/../../../autoload.php';
 $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
@@ -13,8 +11,4 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-$generateQuestion = function () {
-    return generateEvenQuestion();
-};
-
-startGame(EVEN_GAME_RULES, $generateQuestion);
+startEvenGame();
