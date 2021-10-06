@@ -12,10 +12,14 @@ function gcd(int $num1, int $num2)
     $b = min(abs($num1), abs($num2));
 
     while (true) {
-        if ($b === 0) return $a;
+        if ($b === 0) {
+            return $a;
+        }
         $a %= $b;
 
-        if ($a === 0) return $b;
+        if ($a === 0) {
+            return $b;
+        }
         $b %= $a;
     }
 }
