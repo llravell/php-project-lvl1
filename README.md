@@ -9,3 +9,4 @@
 ## Demo
 - [Even game](https://asciinema.org/a/5ukr40hg0weRXKFlpPWOejYAI)
 - [Calc game](https://asciinema.org/a/HZkZ8r7EjCkOG5zWsVJcxRbS4)
+- [Gcd game](https://asciinema.org/a/XgQXyMRf56yypB4DDsL7PtmTc)
