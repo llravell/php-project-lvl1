@@ -19,7 +19,7 @@ function isPrime(int $num): bool
 
 function startPrimeGame(): void
 {
-    $generateQuestion = function () {
+    $generateQuestion = function (): array {
         $number = random_int(1, 100);
         $rightAnswer = isPrime($number) ? 'yes' : 'no';
 

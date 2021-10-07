@@ -20,14 +20,14 @@ function calcExtention(int $a, int $b, string $operation): int
         return $a + $b;
     } elseif ($operation === '-') {
         return $a - $b;
-    } elseif ($operation === '*') {
+    } else {
         return $a * $b;
     }
 }
 
 function startCalcGame(): void
 {
-    $generateQuestion = function () {
+    $generateQuestion = function (): array {
         $a = random_int(1, 50);
         $b = random_int(1, 50);
         $operation = getRandomOperation();

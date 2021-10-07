@@ -13,7 +13,7 @@ function isEven(int $number): bool
 
 function startEvenGame()
 {
-    $generateQuestion = function () {
+    $generateQuestion = function (): array {
         $num = random_int(1, 100);
         $rightAnswer = isEven($num) ? 'yes' : 'no';
 

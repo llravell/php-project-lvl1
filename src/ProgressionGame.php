@@ -34,7 +34,7 @@ function displayProgressionWithMissingItem($progression, $missingIndex): string
 
 function startProgressionGame(): void
 {
-    $generateQuestion = function () {
+    $generateQuestion = function (): array {
         $progression = generateRandomProgression();
         $missingNumberIndex = random_int(0, PROGRESSION_LENGTH - 1);
         $missingNumber = $progression[$missingNumberIndex];

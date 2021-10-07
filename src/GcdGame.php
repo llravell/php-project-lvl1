@@ -26,7 +26,7 @@ function gcd(int $num1, int $num2): int
 
 function startGcdGame(): void
 {
-    $generateQuestion = function () {
+    $generateQuestion = function (): array {
         $baseNumber = random_int(2, 25);
         $a = $baseNumber * random_int(2, 10);
         $b = $baseNumber * random_int(2, 10);
