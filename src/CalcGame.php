@@ -8,7 +8,7 @@ const GAME_RULES = 'What is the result of the expression?';
 
 const OPERATIONS = ['+', '-', '*'];
 
-function getRandomOperation(): stirng
+function getRandomOperation(): string
 {
     $index = random_int(0, sizeof(OPERATIONS) - 1);
     return OPERATIONS[$index];
