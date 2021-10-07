@@ -6,7 +6,8 @@
         "bin/brain-even",
         "bin/brain-calc",
         "bin/brain-gcd",
-        "bin/brain-progression"
+        "bin/brain-progression",
+        "bin/brain-prime"
     ],
     "description": "brain games",
     "license": "MIT",
@@ -20,7 +21,8 @@
             "src/EvenGame.php",
             "src/CalcGame.php",
             "src/GcdGame.php",
-            "src/ProgressionGame.php"
+            "src/ProgressionGame.php",
+            "src/PrimeGame.php"
         ]
     },
     "authors": [

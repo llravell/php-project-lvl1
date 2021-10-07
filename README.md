@@ -11,3 +11,4 @@
 - [Calc game](https://asciinema.org/a/HZkZ8r7EjCkOG5zWsVJcxRbS4)
 - [Gcd game](https://asciinema.org/a/XgQXyMRf56yypB4DDsL7PtmTc)
 - [Progression game](https://asciinema.org/a/4SmbpSx4S1xyuX5Bvo9fOTLud)
+- [Prime game](https://asciinema.org/a/iPMsq5VVRYgdH4GS6X5ckqPDA)
