@@ -10,7 +10,7 @@ const QUESTION_COUNT = 3;
 function readUserName(): string
 {
     line('Welcome to the Brain Game!');
-    return prompt('May I have your name?', false, ' ');
+    return prompt('May I have your name?', '', ' ');
 }
 
 function greetUser(string $name): void
@@ -37,7 +37,7 @@ function askQuestion(string $question): string
 
 function configurateGame(string $rules, callable $generateQuestion): callable
 {
-    return function () use ($rules, $generateQuestion) {
+    return function () use ($rules, $generateQuestion): void {
         $userName = readUserName();
         greetUser($userName);
         printGameRules($rules);

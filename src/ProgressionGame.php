@@ -22,7 +22,7 @@ function generateRandomProgression(): array
     return $progression;
 }
 
-function displayProgressionWithMissingItem($progression, $missingIndex): string
+function displayProgressionWithMissingItem(array $progression, int $missingIndex): string
 {
     $buffer = [];
     foreach ($progression as $i => $item) {
