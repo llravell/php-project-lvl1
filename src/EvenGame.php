@@ -4,7 +4,7 @@ namespace Hexlet\Code\EvenGame;
 
 use function Hexlet\Code\Engine\configurateGame;
 
-const EVEN_GAME_RULES = 'Answer "yes" if the number is even, otherwise answer "no".';
+const GAME_RULES = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 function isEven(int $number)
 {
@@ -13,13 +13,13 @@ function isEven(int $number)
 
 function startEvenGame()
 {
-    $generateEvenQuestion = function () {
+    $generateQuestion = function () {
         $num = random_int(1, 100);
         $rightAnswer = isEven($num) ? 'yes' : 'no';
 
         return [(string) $num, $rightAnswer];
     };
 
-    $start = configurateGame(EVEN_GAME_RULES, $generateEvenQuestion);
+    $start = configurateGame(GAME_RULES, $generateQuestion);
     $start();
 }

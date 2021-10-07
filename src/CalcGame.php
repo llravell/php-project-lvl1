@@ -4,7 +4,7 @@ namespace Hexlet\Code\CalcGame;
 
 use function Hexlet\Code\Engine\configurateGame;
 
-const CALC_GAME_RULES = 'What is the result of the expression?';
+const GAME_RULES = 'What is the result of the expression?';
 
 const OPERATIONS = ['+', '-', '*'];
 
@@ -27,7 +27,7 @@ function calcExtention(int $a, int $b, string $operation)
 
 function startCalcGame()
 {
-    $generateCalcQuestion = function () {
+    $generateQuestion = function () {
         $a = random_int(1, 50);
         $b = random_int(1, 50);
         $operation = getRandomOperation();
@@ -38,6 +38,6 @@ function startCalcGame()
         return [$question, $rightAnswer];
     };
 
-    $start = configurateGame(CALC_GAME_RULES, $generateCalcQuestion);
+    $start = configurateGame(GAME_RULES, $generateQuestion);
     $start();
 }

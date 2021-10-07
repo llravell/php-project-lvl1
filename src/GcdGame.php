@@ -4,7 +4,7 @@ namespace Hexlet\Code\GcdGame;
 
 use function Hexlet\Code\Engine\configurateGame;
 
-const GCD_GAME_RULES = 'Find the greatest common divisor of given numbers.';
+const GAME_RULES = 'Find the greatest common divisor of given numbers.';
 
 function gcd(int $num1, int $num2)
 {
@@ -26,7 +26,7 @@ function gcd(int $num1, int $num2)
 
 function startGcdGame()
 {
-    $generateEvenQuestion = function () {
+    $generateQuestion = function () {
         $baseNumber = random_int(2, 25);
         $a = $baseNumber * random_int(2, 10);
         $b = $baseNumber * random_int(2, 10);
@@ -37,6 +37,6 @@ function startGcdGame()
         return [$question, $rightAnswer];
     };
 
-    $start = configurateGame(GCD_GAME_RULES, $generateEvenQuestion);
+    $start = configurateGame(GAME_RULES, $generateQuestion);
     $start();
 }
