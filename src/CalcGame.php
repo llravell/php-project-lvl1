@@ -8,13 +8,13 @@ const GAME_RULES = 'What is the result of the expression?';
 
 const OPERATIONS = ['+', '-', '*'];
 
-function getRandomOperation()
+function getRandomOperation(): stirng
 {
     $index = random_int(0, sizeof(OPERATIONS) - 1);
     return OPERATIONS[$index];
 }
 
-function calcExtention(int $a, int $b, string $operation)
+function calcExtention(int $a, int $b, string $operation): int
 {
     if ($operation === '+') {
         return $a + $b;
@@ -25,7 +25,7 @@ function calcExtention(int $a, int $b, string $operation)
     }
 }
 
-function startCalcGame()
+function startCalcGame(): void
 {
     $generateQuestion = function () {
         $a = random_int(1, 50);

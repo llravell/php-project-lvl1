@@ -8,7 +8,7 @@ const GAME_RULES = 'What number is missing in the progression?';
 
 const PROGRESSION_LENGTH = 10;
 
-function generateRandomProgression()
+function generateRandomProgression(): array
 {
     $currentNumber = random_int(1, 50);
     $step = random_int(1, 5);
@@ -22,7 +22,7 @@ function generateRandomProgression()
     return $progression;
 }
 
-function displayProgressionWithMissingItem($progression, $missingIndex)
+function displayProgressionWithMissingItem($progression, $missingIndex): string
 {
     $buffer = [];
     foreach ($progression as $i => $item) {
@@ -32,7 +32,7 @@ function displayProgressionWithMissingItem($progression, $missingIndex)
     return implode(' ', $buffer);
 }
 
-function startProgressionGame()
+function startProgressionGame(): void
 {
     $generateQuestion = function () {
         $progression = generateRandomProgression();

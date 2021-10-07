@@ -7,35 +7,35 @@ use function cli\prompt;
 
 const QUESTION_COUNT = 3;
 
-function readUserName()
+function readUserName(): string
 {
     line('Welcome to the Brain Game!');
     return prompt('May I have your name?', false, ' ');
 }
 
-function greetUser(string $name)
+function greetUser(string $name): void
 {
     line('Hello, %s!', $name);
 }
 
-function printGameRules(string $gameRules)
+function printGameRules(string $gameRules): void
 {
     line($gameRules);
 }
 
-function printGameOver(string $name, string $wrongAnswer, string $rightAnswer)
+function printGameOver(string $name, string $wrongAnswer, string $rightAnswer): void
 {
     line("'%s' is wrong answer ;(. Correct answer was '%s'.", $wrongAnswer, $rightAnswer);
     line("Let's try again, %s!", $name);
 }
 
-function askQuestion(string $question)
+function askQuestion(string $question): string
 {
     line('Question: %s', $question);
     return prompt('Your answer');
 }
 
-function configurateGame(string $rules, callable $generateQuestion)
+function configurateGame(string $rules, callable $generateQuestion): callable
 {
     return function () use ($rules, $generateQuestion) {
         $userName = readUserName();

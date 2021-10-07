@@ -6,7 +6,7 @@ use function Hexlet\Code\Engine\configurateGame;
 
 const GAME_RULES = 'Find the greatest common divisor of given numbers.';
 
-function gcd(int $num1, int $num2)
+function gcd(int $num1, int $num2): int
 {
     $a = max(abs($num1), abs($num2));
     $b = min(abs($num1), abs($num2));
@@ -24,7 +24,7 @@ function gcd(int $num1, int $num2)
     }
 }
 
-function startGcdGame()
+function startGcdGame(): void
 {
     $generateQuestion = function () {
         $baseNumber = random_int(2, 25);

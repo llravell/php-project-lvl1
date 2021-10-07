@@ -6,7 +6,7 @@ use function Hexlet\Code\Engine\configurateGame;
 
 const GAME_RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-function isPrime(int $num)
+function isPrime(int $num): bool
 {
     for ($i = 2; $i < $num; $i++) {
         if ($num % $i === 0) {
@@ -17,7 +17,7 @@ function isPrime(int $num)
     return $num > 1;
 }
 
-function startPrimeGame()
+function startPrimeGame(): void
 {
     $generateQuestion = function () {
         $number = random_int(1, 100);
