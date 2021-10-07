@@ -8,13 +8,13 @@ const GAME_RULES = 'Answer "yes" if given number is prime. Otherwise answer "no"
 
 function isPrime(int $num)
 {
-  for ($i = 2; $i < $num; $i++) {
-    if ($num % $i === 0) {
-      return false;
+    for ($i = 2; $i < $num; $i++) {
+        if ($num % $i === 0) {
+            return false;
+        }
     }
-  }
 
-  return $num > 1;
+    return $num > 1;
 }
 
 function startPrimeGame()
